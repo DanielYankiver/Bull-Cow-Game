@@ -5,10 +5,15 @@
 void UBullCowCartridge::BeginPlay() // When the game starts
 {
     Super::BeginPlay();
+
+    // Welcoming the Player 
     PrintLine(TEXT("Welcome to Bull Cows!"));
     PrintLine(TEXT("Guess the 4 letter word!")); // Magic Number Remove!
     PrintLine(TEXT("Press enter to continue..."));
-    HiddenWord = TEXT("cake");
+
+    // Setting Up Game 
+    HiddenWord = TEXT("cake"); // Set the HiddenWord
+    // Set Lives 
 }
 
 void UBullCowCartridge::OnInput(const FString& Input) // When the player hits enter
@@ -22,6 +27,16 @@ void UBullCowCartridge::OnInput(const FString& Input) // When the player hits en
     else
     {
        PrintLine(TEXT("You have Lost!")); 
+
+  
     }
-    
+    // Check if Isogram 
+    // Check if right number of characters 
+
+    // Remove Life 
+
+    // Check if Lives > 0
+    // If Yes PlayAgain 
+    // If No Show GameOver
+    // Prompt to Play Again 
 }
