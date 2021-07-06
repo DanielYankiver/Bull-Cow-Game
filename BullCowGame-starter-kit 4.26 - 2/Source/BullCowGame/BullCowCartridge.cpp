@@ -5,13 +5,16 @@ void UBullCowCartridge::BeginPlay() // When the game starts
 {
     Super::BeginPlay();
 
+    SetupGame();
+
+    PrintLine(TEXT("The Hidden Word is: %s"), *HiddenWord); //Debug Line
+    PrintLine(FString::Printf(TEXT("The Hidden Word is: %s"), *HiddenWord)); //Debug Line
+
     // Welcoming The Player
     PrintLine(TEXT("Welcome to Bull Cows!"));
     PrintLine(TEXT("Guess the 4 letter word!")); // Magic Number Remove!
     PrintLine(TEXT("Press enter to continue..."));
     
-    SetupGame();// Setting Up Game
-
     // Prompt Player For Guessm
 }
 
