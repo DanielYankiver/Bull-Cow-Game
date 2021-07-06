@@ -12,12 +12,14 @@ void UBullCowCartridge::BeginPlay() // When the game starts
     
     SetupGame();// Setting Up Game
 
-    // Prompt Player For Guess
+    // Prompt Player For Guessm
 }
 
 void UBullCowCartridge::OnInput(const FString& Input) // When the player hits enter
 {
     ClearScreen();
+
+    HiddenWord.Len()
     
     // Checking PlayerGuess
 
@@ -27,9 +29,7 @@ void UBullCowCartridge::OnInput(const FString& Input) // When the player hits en
     }
     else
     {
-        PrintLine(TEXT("You have Lost!"));
-
-        
+        PrintLine(TEXT("You have Lost!"));   
     }
     // Check If Isogram
     // Prompt To Guess Again
