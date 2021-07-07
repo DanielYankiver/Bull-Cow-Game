@@ -26,6 +26,7 @@ void UBullCowCartridge::OnInput(const FString& Input) // When the player hits en
     if (Input == HiddenWord)
     {
         PrintLine(TEXT("You have Won!"));
+        // bGameOver = true; 
     }
     else
     {
@@ -35,6 +36,7 @@ void UBullCowCartridge::OnInput(const FString& Input) // When the player hits en
         }
         
         PrintLine(TEXT("You have Lost!"));   
+        // bGameOver = true; 
     }
     // Check If Isogram
     // Prompt To Guess Again
@@ -57,4 +59,5 @@ void UBullCowCartridge::SetupGame()
 {
         HiddenWord = TEXT("cakes");
         Lives = 4;  
+        // bGameOver = false; 
 }
