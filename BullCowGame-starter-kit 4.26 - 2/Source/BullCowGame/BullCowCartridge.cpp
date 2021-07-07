@@ -20,8 +20,9 @@ void UBullCowCartridge::BeginPlay() // When the game starts
 void UBullCowCartridge::OnInput(const FString& Input) // When the player hits enter
 {
     ClearScreen();
-    
-    // Checking PlayerGuess
+
+    // if the game is over then ClearScreen() and SetGameUp()
+    // else Checking PlayerGuess
     
     if (Input == HiddenWord)
     {
