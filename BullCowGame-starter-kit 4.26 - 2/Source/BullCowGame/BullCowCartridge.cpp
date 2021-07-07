@@ -7,14 +7,7 @@ void UBullCowCartridge::BeginPlay() // When the game starts
 
     SetupGame();
 
-    PrintLine(TEXT("The HiddenWord is: %s. "), *HiddenWord); //Debug Line
-
-    // Welcoming The Player
-    PrintLine(TEXT("Welcome to Bull Cows!"));
-    PrintLine(TEXT("Guess the %i letter word!"), HiddenWord.Len()); 
-    PrintLine(TEXT("Type in your guess and press enter to continue..."));
-    
-    // Prompt Player For Guess
+    PrintLine(TEXT("The HiddenWord is: %s. "), *HiddenWord); //Debug Line 
 }
 
 void UBullCowCartridge::OnInput(const FString& Input) // When the player hits enter
@@ -58,7 +51,13 @@ void UBullCowCartridge::OnInput(const FString& Input) // When the player hits en
 
 void UBullCowCartridge::SetupGame()
 {
+         // Welcoming The Player
+        PrintLine(TEXT("Welcome to Bull Cows!"));
+        
         HiddenWord = TEXT("cakes");
         Lives = 4;  
-        // bGameOver = false; 
+        bGameOver = false; 
+        
+        PrintLine(TEXT("Guess the %i letter word!"), HiddenWord.Len()); 
+        PrintLine(TEXT("Type in your guess. \nPress enter to continue...")); // Prompt Player Guess
 }
