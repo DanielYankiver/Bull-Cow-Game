@@ -48,7 +48,6 @@ void UBullCowCartridge::OnInput(const FString& Input) // When the player hits en
     // Prompt To Play Again, Press Enter To Play Again?
     // Check User Input
     // PlayAgain Or Quit
-
 }
 
 void UBullCowCartridge::SetupGame()
